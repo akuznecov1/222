@@ -24,7 +24,7 @@ public class CarServiceImpl implements CarService {
         if ((id >= 5) || (id <= 0)) {
             return cars;
         }else {
-            return cars.stream().limit(id).collect(Collectors.toList());
+            return cars.stream().limit(id).toList();
         }
 
     }

@@ -13,10 +13,10 @@ public class CarController {
 
     @Autowired
     CarService carService;
-    @GetMapping(value = "/cars")
+    @GetMapping(value = "/car")
     public String getCars(@RequestParam(value = "id", defaultValue = "5") int id, Model model) {
         model.addAttribute("cars", carService.listCar(id));
-        return "cars";
+        return "car";
     }
 
 }
