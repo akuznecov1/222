@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @Service
 public class CarServiceImpl implements CarService {
 
-    public List<Car> listCar(int id) {
+    public List<Car> listCar(int count) {
         List<Car> cars = new ArrayList<>();
         cars.add(new Car("Lada", "coupe", "gas"));
         cars.add(new Car("Mazda", "sedan", "petrol"));
@@ -21,10 +21,10 @@ public class CarServiceImpl implements CarService {
 
 
 
-        if ((id >= 5) || (id <= 0)) {
+        if ((count >= 5) || (count <= 0)) {
             return cars;
         }else {
-            return cars.stream().limit(id).toList();
+            return cars.stream().limit(count).toList();
         }
 
     }

@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
 
 public interface CarService {
 
-    List<Car> listCar(int id);
+    List<Car> listCar(int count);
 }
